@@ -1,0 +1,115 @@
+
+
+Plovdiv>
+Plovdiv>en
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#ip dh
+Plovdiv(config)#ip dhcp pool pool_10
+Plovdiv(dhcp-config)#netw
+Plovdiv(dhcp-config)#network 192.168.10.0 255.255.255.128
+Plovdiv(dhcp-config)#dns
+Plovdiv(dhcp-config)#dns-server 192.168.1.2
+Plovdiv(dhcp-config)#def
+Plovdiv(dhcp-config)#default-router 192.168.10.1
+Plovdiv(dhcp-config)#dom
+Plovdiv(dhcp-config)#domain-name testAd
+Plovdiv(dhcp-config)#exit
+Plovdiv(config)#ip dh
+Plovdiv(config)#ip dhcp exc
+Plovdiv(config)#ip dhcp excluded-address 192.168.10.1 192.168.10.5
+Plovdiv(config)#
+Plovdiv(config)#
+Plovdiv(config)#ip dh
+Plovdiv(config)#ip dhcp pool pool_20
+Plovdiv(dhcp-config)#networ
+Plovdiv(dhcp-config)#network 192.168.10.128 255.255.255.192
+Plovdiv(dhcp-config)#dns
+Plovdiv(dhcp-config)#dns-server 192.168.1.2
+Plovdiv(dhcp-config)#def
+Plovdiv(dhcp-config)#default-router 192.168.10.129
+Plovdiv(dhcp-config)#dom
+Plovdiv(dhcp-config)#domain-name testPr
+Plovdiv(dhcp-config)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+Plovdiv(config)#ip dh
+Plovdiv(config)#ip dhcp ex
+Plovdiv(config)#ip dhcp excluded-address 192.168.10.129 192.168.10.133
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sofia(config)#ip dh
+Sofia(config)#ip dhcp pool pool_1
+Sofia(dhcp-config)#ne
+Sofia(dhcp-config)#network 192.168.20.0 255.255.255.224
+Sofia(dhcp-config)#dns
+Sofia(dhcp-config)#dns-server 192.168.1.2
+Sofia(dhcp-config)#defa
+Sofia(dhcp-config)#default-router 192.168.20.1
+Sofia(dhcp-config)#doma
+Sofia(dhcp-config)#domain-name testH
+Sofia(dhcp-config)#exit
+Sofia(config)#
+Sofia(config)#
+Sofia(config)#ip dh
+Sofia(config)#ip dhcp pool pool_2
+Sofia(dhcp-config)#ne
+Sofia(dhcp-config)#network 192.168.20.32 255.255.255.224
+Sofia(dhcp-config)#dns
+Sofia(dhcp-config)#dns-server 192.168.1.2
+Sofia(dhcp-config)#deg
+Sofia(dhcp-config)#def
+Sofia(dhcp-config)#default-router 192.168.20.33
+Sofia(dhcp-config)#domain
+Sofia(dhcp-config)#domain-name testS
+Sofia(dhcp-config)#exit
+Sofia(config)#
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#
+
+
+
+Router#
+Router#ip dhc
+Router#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#ip dh
+Router(config)#ip dhcp pool pool_1
+Router(dhcp-config)#
+Router(dhcp-config)#netw
+Router(dhcp-config)#network 192.168.30.0 255.255.255.192
+Router(dhcp-config)#def
+Router(dhcp-config)#default-router 192.168.30.1
+Router(dhcp-config)#dns
+Router(dhcp-config)#dns-server 192.168.1.2
+Router(dhcp-config)#dom
+Router(dhcp-config)#domain-name testAc
+Router(dhcp-config)#exit
+Router(config)#ip dh
+Router(config)#ip dhcp ex
+Router(config)#ip dhcp excluded-address 192.168.30.1 192.168.30.5
+Router(config)#do wr
+Building configuration...
+[OK]

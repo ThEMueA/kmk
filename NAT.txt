@@ -1,0 +1,82 @@
+Plovdiv>
+Plovdiv>
+Plovdiv>en
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#acc
+Plovdiv(config)#access-list 101 deny ip 192.168.20.0 255.255.255.0
+% Incomplete command.
+Plovdiv(config)#access-list 101 deny ip 192.168.20.0 0.0.0.255 any
+Plovdiv(config)#access-list 101 permit ip any any
+Plovdiv(config)#
+Plovdiv(config)#int fa0/1
+Plovdiv(config-if)#ip acc
+Plovdiv(config-if)#ip access-group 101 out
+Plovdiv(config-if)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+drugoto stava s wm kato mu q smetnesh i mu kajesh za koq mreja sushtnost da mahne pravoto.
+
+Plovdiv(config)#acc
+Plovdiv(config)#access-list 102 deny ip 192.168.30.0 0.0.0.63
+% Incomplete command.
+Plovdiv(config)#access-list 102 deny ip 192.168.30.0 0.0.0.63 any
+Plovdiv(config)#access-list 102 permit ip any any
+Plovdiv(config)#
+Plovdiv(config)#int fa0/1
+Plovdiv(config-if)#ip acc
+Plovdiv(config-if)#ip access-group 102 out
+Plovdiv(config-if)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+
+i sega dhcp to acc ne trqbva da ima dostup do dns a, a eng static trqbva , A DANO MOLYA
+e da trqbva what nali az sum gu pisal.
+
+
+
+samo edin accses group na interface :3
+
+
+Plovdiv>en
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#access
+Plovdiv(config)#access-list 102 deny ip 192.168.30.0 0.0.0.63 any
+Plovdiv(config)#access-list 102 deny ip 192.168.20.0 0.0.0.255 any
+Plovdiv(config)#access-list 102 permit ip any any
+Plovdiv(config)#
+Plovdiv(config)#int fa0/1
+Plovdiv(config-if)#ip ac
+Plovdiv(config-if)#ip access-group 102 out
+Plovdiv(config-if)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+nvm  v seriala shte se sloji tazi shitnq ne stana :3
+Sofia(config)#acc
+Sofia(config)#access-list 103 deny ip 192.168.20.0 0.0.0.255 any
+Sofia(config)#access-list 103 ap
+Sofia(config)#access-list 103 per
+Sofia(config)#access-list 103 permit any any
+                                      ^
+% Invalid input detected at '^' marker.
+	
+Sofia(config)#access-list 103 permit ip any any
+Sofia(config)#int s
+Sofia(config)#int serial 0/1/0
+Sofia(config-if)#ip ac
+Sofia(config-if)#ip access-group 103 out
+Sofia(config-if)#exit
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#

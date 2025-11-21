@@ -1,0 +1,66 @@
+Plovdiv>
+Plovdiv>en
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#router rip
+Plovdiv(config-router)#exit
+Plovdiv(config)#
+Plovdiv(config)#ip routing
+Plovdiv(config)#router rip
+Plovdiv(config-router)#version 2
+Plovdiv(config-router)#net
+Plovdiv(config-router)#network 192.168.1.0   //na dns servera networka
+Plovdiv(config-router)#network 192.168.10.0   // na vlan 10 networka
+Plovdiv(config-router)#network 192.168.10.128// na vlan 20 networka deto go subnah me, eto vij che purviqt adres e network, vtoriqt ti e purvi :3
+Plovdiv(config-router)#network 192.168.100.0  // na RIP2 mrejata deto polzvam za serial, shtot v neq bukvalno sa 2 rutera net i brod
+Plovdiv(config-router)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+
+
+
+opisvame samo mrejata na rutera, vtoriqt nqma dns survur..
+
+
+
+Sofia(config)#ip routing
+Sofia(config)#router rup
+                      ^
+% Invalid input detected at '^' marker.
+	
+Sofia(config)#router rip
+Sofia(config-router)#ver 2
+Sofia(config-router)#net
+Sofia(config-router)#network 192.168.100.0   //na seriala RIP
+Sofia(config-router)#net
+Sofia(config-router)#network 192.168.20.0   //na vlan 30
+Sofia(config-router)#network 192.168.20.32  // na vlan 40
+Sofia(config-router)#
+Sofia(config-router)#exit
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#
+
+
+
+
+
+
+Router(config)#ip routing
+Router(config)#router rip
+Router(config-router)#ver 2
+Router(config-router)#netw
+Router(config-router)#network 192.168.100.0
+Router(config-router)#network 192.168.30.0
+Router(config-router)#network 192.168.30.64
+Router(config-router)#exit
+Router(config)#do wr
+Building configuration...
+[OK]
+Router(config)#
+
+varna

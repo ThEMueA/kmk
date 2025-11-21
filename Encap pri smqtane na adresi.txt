@@ -1,0 +1,170 @@
+
+Plovdiv>
+Plovdiv>
+Plovdiv>en 
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#int fa0.10
+                          ^
+% Invalid input detected at '^' marker.
+	
+Plovdiv(config)#
+Plovdiv(config)#int fa0/0.10
+Plovdiv(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.10, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.10, changed state to up
+enc
+Plovdiv(config-subif)#encapsulation do
+Plovdiv(config-subif)#encapsulation dot1Q 10
+Plovdiv(config-subif)#ip add
+Plovdiv(config-subif)#ip address 192.168.10.1 255.255.255.128
+Plovdiv(config-subif)#no shut
+Plovdiv(config-subif)#exit
+Plovdiv(config)#
+Plovdiv(config)#
+Plovdiv(config)#int fa0/0.20
+Plovdiv(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.20, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.20, changed state to up
+enca
+Plovdiv(config-subif)#encapsulation do
+Plovdiv(config-subif)#encapsulation dot1Q 20
+Plovdiv(config-subif)#ip add
+Plovdiv(config-subif)#ip address 192.168.10.129 255.255.255.192
+Plovdiv(config-subif)#no shut
+Plovdiv(config-subif)#exit
+Plovdiv(config)#
+Plovdiv(config)#
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sofia(config)#int fa0/0.30
+Sofia(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.30, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.30, changed state to up
+
+Sofia(config-subif)#enc
+Sofia(config-subif)#encapsulation do
+Sofia(config-subif)#encapsulation dot1Q 30
+Sofia(config-subif)#ip ad
+Sofia(config-subif)#ip address 192.168.20.1 255.255.255.224
+Sofia(config-subif)#no shut
+Sofia(config-subif)#exit
+Sofia(config)#
+Sofia(config)#
+Sofia(config)#
+Sofia(config)#int fa0/0.40
+Sofia(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.40, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.40, changed state to up
+enc
+Sofia(config-subif)#encapsulation do
+Sofia(config-subif)#encapsulation dot1Q 40
+Sofia(config-subif)#ip add
+Sofia(config-subif)#ip address 192.168.20.33 255.255.255.224
+Sofia(config-subif)#no shut
+Sofia(config-subif)#exit
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router(config)#
+Router(config)#
+Router(config)#
+Router(config)#int fa0/0.50
+Router(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.50, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.50, changed state to up
+
+Router(config-subif)#en
+Router(config-subif)#encapsulation do
+Router(config-subif)#encapsulation dot1Q 50
+Router(config-subif)#ip add
+Router(config-subif)#ip address 192.168.30.1 255.255.255.192
+Router(config-subif)#no shut
+Router(config-subif)#exit
+Router(config)#
+Router(config)#int fa0/0.60
+Router(config-subif)#
+%LINK-3-UPDOWN: Interface FastEthernet0/0.60, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0.60, changed state to up
+en
+Router(config-subif)#encapsulation do
+Router(config-subif)#encapsulation dot1Q 60
+Router(config-subif)#ip add
+Router(config-subif)#ip address 192.168.30.65 255.255.255.192
+Router(config-subif)#no shut
+Router(config-subif)#exit
+Router(config)#
+Router(config)#do wr
+Building configuration...
+[OK]
+Router(config)#
+Router#
+%SYS-5-CONFIG_I: Configured from console by console
+
+
+
+
+
+
+
+
+
+
+
+
+

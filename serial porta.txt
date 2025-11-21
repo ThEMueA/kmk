@@ -1,0 +1,95 @@
+
+Plovdiv>
+Plovdiv>en
+Plovdiv#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Plovdiv(config)#int ser
+Plovdiv(config)#int serial 0/1/0
+Plovdiv(config-if)#ip add
+Plovdiv(config-if)#ip address 192.168.100.1
+% Incomplete command.
+Plovdiv(config-if)#ip address 192.168.100.1 255.255.255.252
+Plovdiv(config-if)#no shut
+
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to down
+Plovdiv(config-if)#exit
+Plovdiv(config)#do wr
+Building configuration...
+[OK]
+Plovdiv(config)#
+
+
+
+
+
+Sofia(config)#int ser
+Sofia(config)#int serial 0/1/0
+Sofia(config-if)#ip add
+Sofia(config-if)#ip address 192.168.100.2 255.255.255.252
+Sofia(config-if)#no shut
+
+Sofia(config-if)#
+%LINK-5-CHANGED: Interface Serial0/1/0, changed state to up
+exit
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/0, changed state to up
+
+
+I kato go napravish ot dvete strani interfeisa se diga
+
+
+davame ip ot mrejata 1 na drugiq 2 i te taka sa v mreja 0     1     2        3  
+                                               adres Mreja    R1    R2        broadcast
+
+
+интерфейсът няма активна връзка към друг край (друг рутер). и тя се активира само като влезе в мрежата
+
+това е мрежа с два рутера /30
+
+
+100.0   100.1    100.2    100.3
+0        R1       R2      broadvast
+
+с тези адреси те стоят в мрежата и по тях си говорят
+докато не му int serial , той не е в мрежата
+
+up/down down   up/up   up
+
+
+
+
+
+
+
+
+
+
+
+
+Sofia>
+Sofia>en
+Sofia#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Sofia(config)#int ser
+Sofia(config)#int serial0/1/1
+Sofia(config-if)#ip add
+Sofia(config-if)#ip address 192.168.100.6
+% Incomplete command.
+Sofia(config-if)#ip address 192.168.100.6 255.255.255.252
+Sofia(config-if)#no shut
+
+Sofia(config-if)#
+%LINK-5-CHANGED: Interface Serial0/1/1, changed state to up
+exit
+Sofia(config)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/1, changed state to up
+
+Sofia(config)#do wr
+Building configuration...
+[OK]
+Sofia(config)#
+Sofia#
+%SYS-5-CONFIG_I: Configured from console by console
