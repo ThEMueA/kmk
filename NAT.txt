@@ -80,3 +80,7 @@ Sofia(config)#do wr
 Building configuration...
 [OK]
 Sofia(config)#
+
+it is on fa0.1 to dns
+nat with 2 denys
+only one access group
